@@ -2,7 +2,7 @@
 # Script para monitoramento da utilização da RAM
 
 # Escreve o cabeçalho de identificação dos dados
-echo "#Mem_used Mem_free Mem_buffers Mem_cached Swap_used Swap_free Date Time Elapsed_time" >> monitoramento-memoria.txt
+echo "#Mem_used Mem_free Mem_buffers Mem_cached Swap_used Swap_free Date Time Elapsed_time" >> log/log-memoria.txt
 
 echo "#Mem_used Mem_free Mem_buffers Mem_cached Swap_used Swap_free Date Time Elapsed_time"
 
@@ -32,7 +32,7 @@ do
    echo $memused  $memfree   $membuff  $memcache   $swapused  $swapfree $data $hora $count
 
    # Escreve no arquivo as informações da RAM
-   echo $memused  $memfree   $membuff  $memcache   $swapused  $swapfree $data $hora $count >> monitoramento-memoria.txt
+   echo $memused $memfree $membuff $memcache $swapused $swapfree $data $hora $count >> log/log-memoria.txt
 
    count=`expr $count + 5`
    # Executa o script a cada X unidade de tempo 
