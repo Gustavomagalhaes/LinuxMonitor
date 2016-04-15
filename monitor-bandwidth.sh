@@ -9,7 +9,7 @@
 #    /sys/class/net/eth0/statistics/tx_dropped: number of packets dropped while transmitted 
 
 # Escreve o cabeçalho de identificação dos dados
-echo "Transmitted(kB/s) Received(kB/s) Date Time Seconds" >> log/monitoramento-bandwidth.txt
+echo "Transmitted kB/s Received kB/s Date Time Seconds" >> log/monitoramento-bandwidth.txt
 
 interface="eth0";
 count=0;
@@ -25,7 +25,8 @@ do
         RBPS=`expr $R2 - $R1`
         TKBPS=`expr $TBPS / 1024`
         RKBPS=`expr $RBPS / 1024`
-        banda=`echo TX $interface: $TKBPS kB/s RX $interface: $RKBPS kB/s`
+        #banda=`echo TX $interface: $TKBPS kB/s RX $interface: $RKBPS kB/s`
+        banda=`echo $TKBPS kB/s $RKBPS kB/s`
 
    # Obtem o tempo atual, no formato RFC3339: AAAA-MM-DD HH:MM:SS 
    tempo=`date --rfc-3339=seconds`
