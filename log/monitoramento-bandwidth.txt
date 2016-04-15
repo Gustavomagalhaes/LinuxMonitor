@@ -1,4 +1,0 @@
-Transmitted(kB/s) Received(kB/s) Date Time Seconds
-TX eth0: 0 kB/s RX eth0: 0 kB/s 2016-04-15 14:39:46 0
-TX eth0: 0 kB/s RX eth0: 0 kB/s 2016-04-15 14:39:56 5
-TX eth0: 0 kB/s RX eth0: 2 kB/s 2016-04-15 14:40:06 10
