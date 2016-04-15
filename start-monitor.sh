@@ -1,6 +1,6 @@
 #!/bin/bash
 # Executa todos os processos de monitoramento
-nohup ./monitoramento-cpu.sh>/dev/null&
-nohup ./monitoramento-memoria.sh>/dev/null&
-nohup ./monitoramento-iostat.sh>/dev/null&
-nohup ./monitoramento-bandwidth.sh>/dev/null&
+nohup ./monitor-cpu.sh>/dev/null&
+nohup ./monitor-memoria.sh>/dev/null&
+nohup ./monitor-iostat.sh>/dev/null&
+nohup ./monitor-bandwidth.sh>/dev/null&
