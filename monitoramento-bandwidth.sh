@@ -9,7 +9,7 @@
 #    /sys/class/net/eth0/statistics/tx_dropped: number of packets dropped while transmitted 
 
 # Escreve o cabeçalho de identificação dos dados
-echo "#TX __: _____ kB/s RX __: _____ kB/s data hora intervalo" >> monitoramento-bandwidth.txt
+echo "Transmitted(kB/s) Received(kB/s) Date Time Seconds" >> log/monitoramento-bandwidth.txt
 
 interface="eth0";
 count=0;
@@ -38,7 +38,7 @@ do
    echo $banda $data $hora $count
 
    # Escreve no arquivo as informações 
-   echo $banda $data $hora $count >> monitoramento-bandwidth.txt
+   echo $banda $data $hora $count >> log/monitoramento-bandwidth.txt
    count=`expr $count + 5`
    # Executa o script a cada X unidade de tempo 
    sleep 5
