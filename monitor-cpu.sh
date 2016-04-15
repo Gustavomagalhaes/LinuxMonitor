@@ -3,7 +3,7 @@
 # Script para monitoramento da utilização da CPU
 
 # Escreve o cabeçalho de identificação dos dados
-echo "%usr %sys %iowait %idle date time elapsed_time" >> monitoramento-cpu.txt
+echo "%usr %sys %iowait %idle date time elapsed_time" >> log/log-cpu.txt
 echo "%usr %sys %iowait %idle date time elapsed_time"
 count=0;
 while [ True ]
@@ -27,7 +27,7 @@ do
    echo $cpu $data $hora $count
 
    # Escreve no arquivo as informações do disco
-   echo $cpu $data $hora $count>> monitoramento-cpu.txt
+   echo $cpu $data $hora $count>> log/log-cpu.txt
 
    #Executa o script a cada X unidade de tempo
    #Comentado porque o mpstat ja espera os 60 segundos 
