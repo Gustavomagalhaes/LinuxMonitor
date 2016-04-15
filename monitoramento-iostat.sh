@@ -2,7 +2,7 @@
 # Script para monitoramento do disco
 
 # Escreve o cabecalho de identificacao dos dados
-echo "read(MB/s) write(MB/s) Queue_Length Utilization date time elapsed_time" > monitoramento-iostat.txt
+echo "read(MB/s) write(MB/s) Queue_Length Utilization date time elapsed_time" > log/log-iostat.txt
 
 echo "read(MB/s) write(MB/s) Queue_Length Utilization date time elapsed_time"
 
@@ -24,7 +24,7 @@ do
    echo $disk $data $hora $count
 
    # Escreve no arquivo as informacoes capturadas
-   echo $disk $data $hora $count >> monitoramento-iostat.txt
+   echo $disk $data $hora $count >> log/log-iostat.txt
 
    # Incrementa o contador de tempo
    count=`expr $count + 5`
